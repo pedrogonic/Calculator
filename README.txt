@@ -3,7 +3,7 @@ Electronics and Computational Engeneering
 Programming Languages Course
 
 Group:
-Gabriel ...
+Gabriel Bastos
 Luiz Felipe Santos Vecchietti
 Luiz Henrique Vasconcelos
 Natália França

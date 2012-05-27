@@ -220,7 +220,9 @@ int Op::run(string input)
 				value = Mem::search(aux);
 				if (value == "error")
 					return 2;
-				buff << aux << "="<<Mem::search(aux);
+				if (value[0] == '#')
+					value[0] = '-';
+				buff << aux << "="<<value;
 				aux = buff.str();
 				cout<<"  "<<aux<<endl;
 				return 2;

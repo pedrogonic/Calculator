@@ -51,6 +51,7 @@ string DataM::insMult (string input)
 				noMultPos = input.find('(',noMultPos+1);
       		   }while(noMultPos != string::npos);
 	}
+
 	if (input.find(')',1) != string::npos)
 	{
 		int noMultPos = input.find(')',1);
@@ -63,6 +64,14 @@ string DataM::insMult (string input)
 			else
 				noMultPos = input.find(')',noMultPos+1);
 			}while(noMultPos != string::npos);
+	}
+	
+	int varPos = 1;
+	while (varPos < input.size())
+	{
+		if (((input[varPos] >= 'a' && input[varPos] <= 'z') || (input[varPos] >= 'A' && input[varPos] <= 'Z'))&& (input[varPos-1] >= '0' && input[varPos-1] <= '9'))
+			input.insert (varPos,1,'*');
+		varPos++;	
 	}
 	return input;
 }

@@ -185,7 +185,11 @@ string recursiveHell(string input)
 
 	//Operating the numbers:
 	if (input.find_first_of("*/+-",0) == string::npos)
+	{
+		if (input[0] < '0' || input[0] > '9')
+			input = Mem::search(input);	
 		return input;
+	}
 	else
 		aux = operate (input);
 
